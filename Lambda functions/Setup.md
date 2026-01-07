@@ -67,3 +67,13 @@ To make your code work, you must attach these layers to your specific Lambda fun
 - CivicBot_Handler  -  CivicBot Utilities Layer
 
 - LayerStatusNotifier  -  Twilio SDK Layer
+
+# Triggers for lambda functions
+
+- DynamoDB is trigger of StatusNotifier (DynamoDB Streams)
+
+ <img width="852" height="209" alt="image" src="https://github.com/user-attachments/assets/85aa96f2-2ebb-4952-9245-9de71f557c7f" />
+
+ - API Gateway triggers admin_get_stats, admin_get_issues, admin_update_issue, WhatsappConnector
+
+ <img width="821" height="234" alt="image" src="https://github.com/user-attachments/assets/2024cbce-a75c-40b5-b4a1-aa47479ceb1b" />
