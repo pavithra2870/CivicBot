@@ -7,6 +7,7 @@ Purpose: Provides the necessary libraries for the Lambda to communicate with the
 Contains: twilio, urllib3, requests.
 
 Steps to Create:
+
 1. Prepare the environment:
 
 ```console
@@ -24,11 +25,11 @@ zip -r twilio_layer.zip python
 ```
 4. Deploy to AWS:
 
-Go to Lambda > Layers > Create layer.
+- Go to Lambda > Layers > Create layer.
 
-Upload twilio_layer.zip.
+- Upload twilio_layer.zip.
 
-Compatible Runtimes: Python 3.11, Python 3.12, Python 3.13.
+- Compatible Runtimes: Python 3.11, Python 3.12, Python 3.13.
 
 # Layer 2: CivicBot Utilities Layer
 
@@ -37,6 +38,7 @@ Purpose: Contains common utility code and heavier dependencies used for AI proce
 Contains: boto3 (specifically for newer Bedrock features), requests, and any custom shared logic.
 
 Steps to Create:
+
 1. Prepare the environment:
 ```console
 mkdir utility-layer && cd utility-layer
@@ -52,16 +54,16 @@ zip -r utility_layer.zip python
 ```
 4. Deploy to AWS:
 
-Go to Lambda > Layers > Create layer.
+- Go to Lambda > Layers > Create layer.
 
-Upload utility_layer.zip.
+- Upload utility_layer.zip.
 
 # How to Attach Layers to Your Functions:
 
 To make your code work, you must attach these layers to your specific Lambda functions in the AWS Console:
 
-WhatsApp_Connector  -  Twilio SDK Layer
+- WhatsApp_Connector  -  Twilio SDK Layer
 
-CivicBot_Handler  -  CivicBot Utilities Layer
+- CivicBot_Handler  -  CivicBot Utilities Layer
 
-LayerStatusNotifier  -  Twilio SDK Layer
+- LayerStatusNotifier  -  Twilio SDK Layer
