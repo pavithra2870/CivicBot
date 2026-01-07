@@ -13,7 +13,7 @@ This document provides instructions for setting up the User Pool and Client requ
 * **Password Policy:** Custom (Recommend: Min 8 chars, 1 uppercase, 1 number).
 * **MFA:** Optional (Keep "No MFA" for development, "Required" for production).
 
-### 📝 User Attributes
+### User Attributes
 
 * **Required Attributes:** `email`, `given_name` (First Name), `family_name` (Last Name).
 * **Custom Attributes:** (Optional) `department` (e.g., Roadways, Sanitation).
@@ -30,7 +30,7 @@ This document provides instructions for setting up the User Pool and Client requ
 * `ALLOW_REFRESH_TOKEN_AUTH`
 * `ALLOW_USER_SRP_AUTH` (Secure Remote Password).
 
-### 🌐 Hosted UI & OAuth 2.0
+### Hosted UI & OAuth 2.0
 
 * **Allowed Callback URLs:** `http://localhost:3000` (for dev) and your production URL.
 * **Allowed OAuth Flows:** `Implicit Grant` or `Authorization Code Grant`.
@@ -40,7 +40,7 @@ This document provides instructions for setting up the User Pool and Client requ
 
 To secure the `CivicBotAdminAPI`, follow these steps to link Cognito as an **Authorizer**.
 
-### 🛠️ Step-by-Step Integration
+### Step-by-Step Integration
 
 1. **Navigate to API Gateway:** Open API `ur-api`.
 2. **Create Authorizer:**
